@@ -1,0 +1,14 @@
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Harbor - hlann'
+    repository: 'gpt-engineer/gpt-engineer'
+    command: 'buildAndPush'
+    Dockerfile: 'gpt-engineer/docker/Dockerfile'
+    buildContext: 'gpt-engineer'
+    tags: |
+      latest
+      $(Build.BuildId)
