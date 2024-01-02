@@ -7,7 +7,7 @@ steps:
     containerRegistry: 'Harbor - hlann'
     repository: 'gpt-engineer/gpt-engineer'
     command: 'buildAndPush'
-    Dockerfile: 'gpt-engineer/docker/Dockerfile'
+    Dockerfile: 'docker/Dockerfile'
     buildContext: 'gpt-engineer'
     tags: |
       latest
